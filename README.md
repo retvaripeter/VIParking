@@ -19,6 +19,10 @@ Just write "npm i" in the console. It will install all the dependencies you will
 
 You can run the program in your browser with using "ng serve" in Angular.
 
+**HOW TO USE THE APPLICATION**
+
+Just download the userguide file: https://www.dropbox.com/s/kilnjfulcadzo0h/VIParking.pdf?dl=0
+
 **BUILD WITH**
 
 - Angular
