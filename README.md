@@ -1,6 +1,6 @@
 # VIParking
 
-![Picture](http://cdn.onlinewebfonts.com/svg/img_346131.png)
+![Picture](https://cdn3.iconfinder.com/data/icons/airport-travel-set/15/vip-512.png)
 
 Goal of the program:
 
