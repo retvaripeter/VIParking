@@ -1,6 +1,6 @@
 # VIParking
 
-![Picture](https://cdn3.iconfinder.com/data/icons/airport-travel-set/15/vip-512.png)
+![Picture](https://cdn.shopify.com/s/files/1/0703/1671/products/brand-icon-vip-grey-on-white_1024x1024.jpeg?v=1426125295)
 
 Goal of the program:
 
