@@ -28,4 +28,4 @@ You can run the program in your browser with using "ng serve" in Angular.
 - "ngx-qrcode2" https://www.npmjs.com/package/ngx-qrcode2 - for the QR code generating
 
 **AUTHOR**
--Peter Retvari
+- Peter Retvari
