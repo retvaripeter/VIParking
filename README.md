@@ -1,6 +1,6 @@
 # VIParking
 
-![Picture](http://static1.squarespace.com/static/52411028e4b0a50f16d13564/t/5265bb50e4b03d291eb96ff3/1448508467971/)
+![Picture](http://cdn.onlinewebfonts.com/svg/img_346131.png)
 
 Goal of the program:
 
