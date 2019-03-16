@@ -1,0 +1,120 @@
+<div class="text-center mt-4">
+  <button [disabled]="max10Car" class="btn btn-dark mt-3 mr-4" data-toggle="modal" data-target="#ujparkolas" id="rogzitUj">
+    <i class="fas fa-car "></i>
+    Új Parkolás Rögzítése
+  </button>
+  <button class="btn btn-warning mt-3 mr-4" (click)="onRemoveSelected()" [disabled]="noParkBef" id="parkBef">
+    <i class="fas fa-trash-alt"></i>
+    Parkolás Befejzése</button>
+  <div *ngIf="max10Car">
+    <p class="mt-4 text-danger">A parkoló garázsunk megtelt! Csak 10-nél kevesebb kocsi esetén indíthatsz új
+      parkolást!</p>
+  </div>
+</div>
+<!-- ujparkolas MODAL -->
+<div class="modal" id="ujparkolas">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Parkolás Rögzítése</h5>
+        <button class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="form">
+          <div class="form-group">
+            <label for="rendszam">Rendszám</label>
+            <input type="text" placeholder="A vevő rendszáma..." name="rendszam" class="form-control" #rendszam
+              formControlName="rendszam" [ngClass]="{'is-invalid':form.get('rendszam').touched && form.get('rendszam').invalid}">
+            <div class="invalid-feedback" *ngIf="form.get('rendszam').touched && form.get('rendszam').invalid">
+              <div *ngIf="form.get('rendszam').errors.required">Rendszám kitöltése kötelező</div>
+              <div *ngIf="form.get('rendszam').errors.maxlength">Maxiumum 6 karakter! Ne legyen benne szóköz!</div>
+              <div *ngIf="form.get('rendszam').errors.pattern">A rendszámnak NAGY betűnek és számnak kell lennie. A
+                lehetséges formák:
+                <ul>
+                  <li>3 betű, 3 szám</li>
+                  <li>4 betű, 2 szám</li>
+                  <li>5 betű, 1 szám</li>
+                </ul>
+                Pl.: PEV315
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Név</label>
+            <input type="text" placeholder="A vevő neve..." maxlength="100" name="name" class="form-control" #name
+              formControlName="name" [ngClass]="{'is-invalid':form.get('name').touched && form.get('name').invalid}">
+            <div class="invalid-feedback" *ngIf="form.get('name').touched && form.get('name').invalid">
+              <div *ngIf="form.get('name').errors.required">Név kitöltése kötelező</div>
+              <div *ngIf="form.get('name').errors.maxlength">Maximum 100 karakter lehetséges</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" placeholder="A vevő emailcíme..." class="form-control" name="email" #email
+              formControlName="email" [ngClass]="{'is-invalid': form.get('email').touched && form.get('email').invalid}">
+            <div *ngIf="form.get('email').touched && form.get('email').invalid" class="invalid-feedback">
+              <div *ngIf="form.get('email').errors.required">Az email cím kitöltése kötelező</div>
+              <div *ngIf="form.get('email').errors.email"> Kérem adjon meg egy létező email címet!</div>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="username">Autó Márkája</label>
+            <input type="text" placeholder="Az autó márkája..." maxlength="100" name="autobrand" class="form-control"
+              #autobrand formControlName="autobrand" [ngClass]="{'is-invalid':form.get('autobrand').touched && form.get('autobrand').invalid}">
+            <div class="invalid-feedback">
+              <div>Kérem adja meg az autó márkájat!</div>
+            </div>
+          </div>
+
+          <button [disabled]="!form.valid" class="btn btn-secondary mt-4 modal-footer mx-auto" data-dismiss="modal"
+            type="submit" value="Submit Now!" (click)="onUjParkolas()" data-toggle="modal" data-target="#megkezdettParkolas">Rögzítés</button>
+
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Megkezdett Parkolas MODAL -->
+<div id="print-section">
+  <div class="modal text-center" id="megkezdettParkolas">
+    <div class="modal-dialog">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h3 class="modal-title " id="parkBiz">Parkolási Bizonylat</h3>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+          <ul class="list-group mb-5">
+            <li class="list-group-item text-muted"> Rendszám: <strong>{{autorendszam}}</strong></li>
+            <li class="list-group-item text-muted"> Érkezés ideje: <strong>{{behajtasido}}</strong></li>
+            <li class="list-group-item text-muted"> Név: <strong>{{nev}}</strong></li>
+            <li class="list-group-item text-muted"> Email: <strong>{{emailcim}}</strong></li>
+          </ul>
+          <h4>QRCODE</h4>
+          <ngx-qrcode qrc-element="url" [qrc-value]="qrCodeFizetve"></ngx-qrcode>
+        </div>
+        <div class="modal-footer">
+        </div>
+        <button class="btn btn-secondary mx-auto mb-4 " data-dismiss="modal" printSectionId="print-section" ngxPrint>Bizonylat
+          nyomtatása</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="my-4 mx-auto  " style="width: 90%;" id="table">
+        <ag-grid-angular #agGrid id="myGrid" class="ag-theme-balham   " ag-grid="gridOptions" [columnDefs]="columnDefs"
+          [rowData]="rowData" [gridOptions]="gridOptions" [animateRows]="true" [rowSelection]="rowSelection"
+          (gridReady)="onGridReady($event)"></ag-grid-angular>
+      </div>
+    </div>
+  </div>
+</div>

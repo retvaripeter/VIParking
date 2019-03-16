@@ -1,0 +1,21 @@
+<!-- Welcome screen + User kivalasztasa -->
+<div class="jumbotron jumbotron-fluid text-center" id="welcomeHeader">
+  <div class="container">
+    <h1 class="display-4" id="welcomeH1">Üdvözlünk a VIParkoló oldalán!</h1>
+    <p class="lead">Kérlek válaszd ki a nevedet a listából:</p>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">
+        VIParkoló őrök listája
+      </button>
+      <div class="dropdown-menu text-center " aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#" *ngFor="let user of users" [routerLink]="['/users', user.id, user.name]">{{user.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<router-outlet class="container"></router-outlet>
+<div class="header"></div>

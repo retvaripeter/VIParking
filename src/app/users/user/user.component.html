@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center" style="margin-top: 60px">
+      <div class="card">
+        <div class="card-body">
+          <img src="{{user[id].imagePath}}" alt="" class="img-fluid rounded-circle w-50 mb-3" />
+          <h3>{{user[id].name}}</h3>
+          <h5 class="h5 text-muted">Azonosító: <span class="text-danger">{{user[id].id}}</span> </h5>
+
+          <h6 class=mb-4>
+            Üdvözlünk, {{user[id].name}}!
+          </h6>
+
+          <div class="row">
+            <div class="col-md-12">
+              <a class="text-danger p  mt-4" href="#">
+                <i class="fas fa-user fa-2x mr-2"></i>
+              </a>
+              <p class="text-muted">Kijelentkezés </p>
+            </div>
+            <div class="col-md-12">
+              <i class="fas fa-car fa-2x text-danger"></i>
+              <p class="text-muted">Szabad helyek: <span class="text-danger h5">{{szabadhelyek}}</span> </p>
+
+            </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8 text-center" style="margin-top: 60px">
+      <app-diagramm></app-diagramm>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-md-6">
+      <app-jutalek></app-jutalek>
+    </div>
+    <div class="col-md-6">
+      <app-kassza></app-kassza>
+    </div>
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col-md-12">
+
+
+      <app-table></app-table>
+    </div>
+  </div>
+</div>
