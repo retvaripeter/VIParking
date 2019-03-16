@@ -21,11 +21,11 @@ You can run the program in your browser with using "ng serve" in Angular.
 
 **BUILD WITH**
 
--Angular
--Ag-Grid https://www.ag-grid.com/ - for the table content
--CanvasJS https://canvasjs.com/ -for the charts
--"ngx-print" for the printing part
--"ngx-qrcode2" for the QR code generating
+- Angular
+- Ag-Grid https://www.ag-grid.com/ - for the table content
+- CanvasJS https://canvasjs.com/ -for the charts
+- "ngx-print" for the printing part
+- "ngx-qrcode2" for the QR code generating
 
 **AUTHOR**
 Peter Retvari
