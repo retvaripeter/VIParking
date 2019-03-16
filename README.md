@@ -1,6 +1,8 @@
 # VIParking
 
-![Picture](http://static1.squarespace.com/static/52411028e4b0a50f16d13564/t/5265bb50e4b03d291eb96ff3/1448508467971/) \*[Goal of the program:]
+![Picture](http://static1.squarespace.com/static/52411028e4b0a50f16d13564/t/5265bb50e4b03d291eb96ff3/1448508467971/)
+
+\*Goal of the program:
 
 To create a userfriendly interface for a small car parking business. It allows the user to easily register a car and calculates the final price and the comisson as well.
 
