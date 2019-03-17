@@ -1,5 +1,5 @@
-.header{
-    background-image: url('https://cdn.pixabay.com/photo/2016/01/19/17/57/car-1149997_960_720.jpg');
+.header {
+    background-image: url("../../assets/img/car.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 500px;
@@ -7,17 +7,19 @@
 }
 
 @media only screen and (max-width: 600px) {
-    .header{
-        background-image: url('https://cdn.pixabay.com/photo/2016/01/19/17/57/car-1149997_960_720.jpg');
+    .header {
+        background-image: url("../../assets/img/car.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         min-height: 350px;
         margin-top: -60px;
     }
-    h1{
+
+    h1 {
         font-size: 2.5em;
     }
-    #welcomeH1{
+
+    #welcomeH1 {
         margin-top: 20px;
     }
-  }
+}
