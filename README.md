@@ -9,7 +9,7 @@
 
 **GETTING STARTED**
 
-Just clone the repository or download the files.
+You can download the repository on the right side (green button).
 
 **HOW TO INSTALL/RUN?**
 
@@ -21,7 +21,7 @@ You can run the program in your browser on 'http://localhost:4200' , using "ng s
 
 **HOW TO USE THE APPLICATION**
 
-Just download the userguide: https://www.dropbox.com/s/kilnjfulcadzo0h/VIParking.pdf?dl=0
+Download the userguide: https://www.dropbox.com/s/kilnjfulcadzo0h/VIParking.pdf?dl=0
 
 **BUILD WITH**
 
