@@ -17,7 +17,7 @@ Just write "npm i" in the console. It will install all the dependencies you will
 
 **HOW TO RUN?**
 
-You can run the program in your browser with using "ng serve" in Angular.
+You can run the program in your browser on 'http://localhost:4200' , using "ng serve" in Angular.
 
 **HOW TO USE THE APPLICATION**
 
