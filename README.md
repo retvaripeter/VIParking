@@ -9,7 +9,7 @@
 
 **GETTING STARTED**
 
-Just clone the repository and download the files.
+Just clone the repository or download the files.
 
 **HOW TO INSTALL/RUN?**
 
